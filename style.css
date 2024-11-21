@@ -69,9 +69,9 @@ body{
     transition: .3s ease-in-out;
     border: 1px solid;
     box-shadow: 0px 0px 0px 1xp ;
-    animation: b-shadow .3s forwards;
+    animation: anime1 .3s forwards;
 }
-@keyframes b-shadow{
+@keyframes anime1{
     100%{
         box-shadow: 0px 0px 100px 10px var(--main-color);
     }
@@ -127,7 +127,7 @@ header nav a:hover{
     width:30px;
     height: 29px;
 }
-@media(max-width:800px){
+@media(max-width:768px){
     .info{
         display: none;
     }
@@ -202,9 +202,9 @@ header nav a:hover{
     transition: .3s;
     border: 1px solid;
     box-shadow: 0px 0px 0px 1xp ;
-    animation: anim-shadow .3s forwards;
+    animation: anime2 .3s forwards;
 }
-@keyframes anim-shadow{
+@keyframes anime2{
     100%{
         box-shadow: 0px 0px 110px 3px var(--main-color);
     }
@@ -213,12 +213,12 @@ header nav a:hover{
     background:var(--main-color);
     color: white;
 }
-@media(max-width: 800px){
+@media(max-width: 768px){
     .home-content h1{
         font-size:3rem;
     }
 }
-@media(max-width: 600px){
+@media(max-width: 576px){
     .home-content h1{
         font-size:2rem;
     }
@@ -229,7 +229,7 @@ header nav a:hover{
         display: none;
     }
 }
-@media(max-width: 400px){
+@media(max-width: 350px){
     .home-content .home-links{
         flex-direction: column;
         grid-row-gap: 15px;
@@ -280,16 +280,320 @@ header nav a:hover{
 .service-one:hover img{
     transform: scale(1.1);
 }
-@media(max-width: 1000px){
+@media(max-width: 991px){
     .bg-service .service-one{
         width: 50%;
     }
 }
-@media(max-width: 600px){
+@media(max-width: 576px){
     .bg-service .service-one{
         width: 100%;
     }
 }
+
+.bg-shop{
+    width: 90%;
+    margin: 100px auto;
+}
+.bg-shop .shop-links{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    align-items: center;
+    color: white;
+}
+.shop-links h2{
+    text-transform: capitalize;
+    font-family:'Pushter', cursive ;
+}
+.shop-links .links{
+    display: flex;
+    align-items: center;
+}
+.shop-links .links li{
+    margin-left: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+.shop-links .links li:hover{
+    color: var(--main-color);
+}
+.bg-shop .shop-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-row-gap: 20px;
+}
+.shop-flex .shop1{
+    width: 24%;
+    color: white;
+}
+.shop1 .shop-image{
+    position: relative;
+    overflow: hidden;
+    background: black;
+    padding: 14px 0px;
+    margin-bottom: 1px;
+}
+.shop-image img{
+    width: 100%;
+}
+.shop-image .price{
+    position: absolute;
+    top: 19px;
+    right: 7px;
+    color: #333;
+    border: 1px solid var(--main-color);
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.shop-image .social{
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.shop-image .social a{
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+    border: 1px solid white;
+    padding: 5px 7px;
+    transition: .4s ease-in-out;
+}
+.shop-image .social a:hover{
+    border-color:var(--main-color);
+    color: var(--main-color);
+}
+.shop-image:hover .social{
+    animation: anime3 .5s ease-in-out forwards;
+}
+@keyframes anime3{
+    0%{
+        opacity: 0;
+        bottom: -100px;
+    }
+    100%{
+        opacity: 1;
+        bottom: 30px;
+    }
+}
+.shop-image .social{
+    animation: anime4 .5s ease-in-out forwards;
+}
+@keyframes anime4{
+    0%{
+        opacity: 1;
+        bottom: 30px;
+    }
+    100%{
+        opacity: 0;
+        bottom: -100px;
+    }
+}
+.shop1 h3{
+    text-transform: capitalize;
+    font-size: 1.3rem;
+}
+.shop1 .fa-solid{
+    color:gold;
+}
+.shop1 .stars{
+    margin-bottom: 10px;
+}
+.shop1 .stars i{
+    margin: 0px -2px;
+}
+.shop1 article{
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 5px;
+    display: inline-block;
+}
+.shop1 span{
+    color: gray;
+    text-decoration: line-through;
+}
+@media(max-width: 991px){
+    .shop-flex .shop1{
+        width: 49%;
+    }
+}
+@media(max-width: 576px){
+    .shop-flex .shop1{
+        width: 49%;
+    }
+    .bg-shop .shop-links{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+.bg-menu{
+    background-image: linear-gradient(to right,rgba(0,8,0,1),rgba(0,9,0,.4),rgba(0,0,0,.2),rgba(0,0,0,4)), url(https://i.pinimg.com/564x/15/1a/2e/151a2ee727935d4e039050d4fb7fa513.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 50px 0px;
+    /* opacity: .2; */
+}
+.menu-title{
+    margin-bottom: 50px;
+    text-align: center;
+    color: white;
+}
+.menu-title section{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: var(--main-color);
+}
+.menu-title h2{
+    font-size: 2.8rem;
+    margin-top: 4px;
+    font-family: 'pushter', cursive;
+    text-transform: capitalize;
+}
+.menu-title hr{
+    margin: 15px auto;
+    width: 250px;
+    background: var(--main-color);
+}
+.menu-flex{
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.menu-flex .menu1{
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 20px;
+}
+.menu1 img{
+    width: 80px;
+    margin-right: 10px;
+}
+.menu1 h4{
+    text-transform: capitalize;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+.menu1 .line{
+    margin-top: 10px;
+    border-top: 1px dotted var(--main-color);
+    width:52%;
+}
+.menu-link{
+    text-align: center;
+    margin: 30px 0;
+}
+.menu-link a{
+    text-decoration: none;
+    display: inline-block;
+    text-transform: capitalize;
+    color: white;
+    background: var(--main-color);
+    padding: 6px 15px;
+    transition: .4s ease-in-out;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+}
+.menu-link a:hover{
+    background: transparent;
+    box-shadow: 0px 0px 0px 1xp ;
+    animation: anime5 .3s forwards;
+}
+@keyframes anime5{
+    100%{
+        box-shadow: 0px 0px 100px 10px var(--main-color);
+    }
+}
+@media(max-width: 991px){
+    .menu-flex .menu1{
+        width: 100%;
+    }
+}
+
+.bg-gallery{
+    margin: 100px 0;
+}
+.bg-gallery .gallery-flex{
+    display: flex;
+}
+.gallery-flex .image1{
+    width: 30%;
+}
+.gallery-flex img{
+    width: 100%;
+    cursor: pointer;
+}
+.inside-gal{
+    display: flex;
+    width: 40%;
+}
+.inside-gal .left{
+    display: flex;
+    flex-direction: column;
+}
+.inside-gal .right{
+    display: flex;
+    flex-direction: column;
+}
+.last{
+    width: 30%;
+    height: 80%;
+}
+.bg-gallery .event{
+    position: relative;
+}
+.bg-gallery .overlay{
+    /* position: absolute; */
+    /* background: rgba(0,0,0,.4); */
+    /* top: 0; */
+    /* left: 0; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* opacity: 0; */
+    transition: .4s ease-in-out;
+}
+.bg-gallery .event:hover .overlay{
+    opacity: 1;
+}
+@media(max-width:768px){
+    .bg-gallery .gallery-flex{
+        flex-wrap: wrap;
+    }
+    .gallery-flex .image1{
+        width: 50%;
+    }
+    .inside-gal{
+        width: 50%;
+    }
+    .bg-gallery .last-image{
+        display: none;
+    }
+}
+@media(max-width: 576px){
+    .gallery-flex .image1{
+        width: 100%;
+    }
+    .inside-gal{
+        width: 100%;
+    }
+}
+
 footer{
     background: rgb(0, 0, 0);
     font-size: smaller;
